@@ -25,6 +25,15 @@ class ClasificadorIncidencias:
     def predecir(self, texto: str) -> dict:
         texto_limpio = self.limpiar_texto(texto)
 
+        if not texto_limpio:
+            return {
+                "texto_original": texto,
+                "texto_procesado": "",
+                "area_predicha": None,
+                "confianza": 0.0,
+                "top_3": []
+            }
+
         vector = self.embedding_model.encode([texto_limpio], convert_to_numpy=True)
 
         pred = self.clf.predict(vector)[0]
