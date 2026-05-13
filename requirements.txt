@@ -1,9 +1,7 @@
-pandas
-numpy
-scikit-learn
+fastapi
+uvicorn[standard]
 sentence-transformers
-fastapi[standard]
-uvicorn
+scikit-learn
+numpy
 joblib
-pymysql
-requests
+pydantic
