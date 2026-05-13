@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+sentence-transformers
+fastapi[standard]
+uvicorn
+joblib
+pymysql
+requests
