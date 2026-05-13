@@ -8,7 +8,7 @@ from app.data_preprocess import limpiar_texto
 
 class ClasificadorIncidencias:
     def __init__(self):
-        self.clf = joblib.load(SVM_MODEL_PATH)
+        self.clf = joblib.load(LOGREG_MODEL_PATH)
         self.label_encoder = joblib.load(LABEL_ENCODER_PATH)
         self.metadata = joblib.load(METADATA_PATH)
 
